@@ -1,0 +1,3 @@
+<jboss-web>
+	<context-root>/portfolio</context-root>
+</jboss-web>
