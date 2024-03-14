@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:components="http://java.sun.com/jsf/composite/components"
+	xmlns:jsf="http://xmlns.jcp.org/jsf">
+	
+	<h:head>
+	    <meta charset="UTF-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    
+	    <title>Geovani Debastiani's Portfolio</title>
+	    
+  		<h:outputStylesheet library="css" name="layout.css" />
+		<h:outputStylesheet library="css" name="alignments.css" />
+		<h:outputStylesheet library="css" name="home.css" />
+		<h:outputStylesheet library="css" name="about-me.css" />
+		<h:outputStylesheet library="css" name="technologies.css" />
+		<h:outputStylesheet library="css" name="projects.css" />
+		
+	    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css' />
+	    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css' />
+	    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	</h:head>
+	
+	<h:body>
+		<f:view locale="#{MBAppConfigs.language}" id="view-locale">	
+		    <header>
+		        <div id="div-titulo">
+		           <img src="images/logo.png" style="width: 80px; height: 40px;" />
+		        </div>
+		
+		        <div class="mobile-menu" onclick="abrirMenu()">
+		            <div id="line1"></div>
+		            <div id="line2"></div>
+		            <div id="line3"></div>
+		        </div>  
+		
+				<div class="horizontal-center">
+					<nav id="menu-desktop">
+			            <ul id="menu">
+			                <a href="#inicio">#{label.home}</a>
+			                <a href="#sobre">#{label.about_me}</a>
+			                <a href="#tecnologias">#{label.technologies}</a>
+			                <a href="#projetos" id="btn-contato">#{label.projects}</a>
+			            </ul>
+			        </nav>
+			        
+					<i jsf:id="options" class="fi fi-rs-settings"></i>
+				</div>
+		    </header>
+		
+		    <div id="menu-mobile">
+		        <a href="#inicio">Home</a>
+		        <a href="#sobre">About Me</a>
+		        <a href="#tecnologias">Technologies</a>
+		        <a href="#projetos" id="btn-contato">Projects</a>
+		    </div>
+		
+		    <main>
+				<ui:include src="/htdocs/sections/home.xhtml" />
+				<ui:include src="/htdocs/sections/about-me.xhtml" />
+				<ui:include src="/htdocs/sections/technologies.xhtml" />
+				<ui:include src="/htdocs/sections/projects.xhtml" />
+		    </main>
+		
+		    <footer>
+		        <p>Copyright &copy; Geovani Debastiani, 2024</p>
+		    </footer>
+		
+		    <script>
+		        function abrirMenu() {  
+		            if(document.getElementById("menu-mobile").clientWidth == 0) {
+		                document.getElementById("menu-mobile").style.right = "0px";
+		                document.getElementById("menu-mobile").style.width = "50vw";
+		            } else {
+		                document.getElementById("menu-mobile").style.right = "-300px";
+		                document.getElementById("menu-mobile").style.width = "0";
+		            }
+		        }
+		    </script>
+		    
+		    <ui:include src="/htdocs/overlayOptions.xhtml" />
+	    </f:view>
+    </h:body>
+</html>

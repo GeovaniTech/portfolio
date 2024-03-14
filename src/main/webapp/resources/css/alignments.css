@@ -97,3 +97,70 @@
 	justify-content: flex-end;
 	align-items: center;
 }
+
+/* #################### MARGINS #################### */
+
+.mg-r-5 {
+	margin-right: 5px !important;
+}
+
+.mg-r-10 {
+	margin-right: 10px !important;
+}
+
+.mg-r-15 {
+	margin-right: 15px !important;
+}
+
+.mg-r-20 {
+	margin-right: 20px !important;
+}
+
+.mg-r-40 {
+	margin-right: 40px !important;
+}
+
+
+.mg-b-5 {
+	margin-bottom: 5px !important;
+}
+
+.mg-b-10 {
+	margin-bottom: 10px !important;
+}
+
+.mg-b-20 {
+	margin-bottom: 20px !important;
+}
+
+.mg-b-30 {
+	margin-bottom: 30px !important;
+}
+
+.mg-t-5 {
+	margin-top: 5px !important; 
+}
+
+.mg-t-8 {
+	margin-top: 8px !important; 
+}
+
+.mg-t-10 {
+	margin-top: 10px !important;
+}
+
+.mg-t-15 {
+	margin-top: 15px !important;
+}
+
+.mg-t-20 {
+	margin-top: 20px !important;
+}
+
+.mg-t-25 {
+	margin-top: 25px !important;
+}
+
+.mg-t-30 {
+	margin-top: 30px !important;
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:components="http://java.sun.com/jsf/composite/components">
+
+<h:body>
+	<style>
+		#div-textos-sobre > a  {
+			color: var(--primary-color);	
+		}
+	</style>
+	<section id="sobre" class="reveal">
+		<div>
+			<h2 id="titulo-page-sobre">
+				#{label.about} <span style="color: var(--primary-color);">#{label.me}</span>
+			</h2>
+		</div>
+
+		<div id="div-textos-sobre">
+			<h:outputText value="#{label.self_intro}" escape="false" />
+	
+			<br /><br />
+			<h:outputText value="#{label.education_intro}" escape="false" />
+	
+			<br /><br />
+			<h:outputText value="#{label.education_self_study}" escape="false" />
+	
+			<br /><br />
+			<h:outputText value="#{label.job_2020}" escape="false" />
+	
+			<br /><br />
+			<h:outputText value="#{label.job_2022}" escape="false" />
+	
+			<br /><br />
+			<h:outputText value="#{label.promotion_2023}" escape="false" />
+	
+			<br /><br />
+			<h:outputText value="#{label.language_learning}" escape="false" />
+		</div>
+	</section>
+</h:body>
+</html>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:components="http://java.sun.com/jsf/composite/components">
+	
+	<h:body>	
+        <section id="projetos" class="reveal">
+            <div>
+                <h2 id="titulo-page-projeto">#{label.my_projects}</h2>
+            </div>
+
+            <div id="container-projetos">
+				<components:project 
+            		name="InvestMe"
+            		description="#{label.financial_control_system}" 
+            		technologies="Java, JSF, Primefaces, JPA  #{label.and_word} Postgresql"
+            		github="https://github.com/GeovaniTech/lecoffee"
+            		url="https://www.devpree.com.br/investme/login"
+            		image="images/investme-home.png"
+            		icon="images/icons/investme.ico" />
+            
+            	<components:project 
+            		name="LeCoffee"
+            		description="#{label.coffee_shop_system}" 
+            		technologies="Java, JSF, Primefaces, JPA #{label.and_word} Postgresql"
+            		github="https://github.com/GeovaniTech/lecoffee"
+            		url="https://www.devpree.com.br/lecoffee/login"
+            		image="images/lecoffee.png"
+            		icon="images/icons/lecoffee.ico" />
+				
+				<components:project 
+            		name="DevJobs"
+            		description="#{label.projects_manager}" 
+            		technologies="Java, JSF, Primefaces, JPA #{label.and_word} Postgresql"
+            		github="https://github.com/GeovaniTech/DevJobs"
+            		image="images/devjobs.png" />
+
+				<components:project 
+            		name="Délis Pizzaria"
+            		description="#{label.pizzas_system}" 
+            		technologies="Java, JSF, CSS, Primefaces, JDBC #{label.and_word} Postgresql"
+            		github="https://github.com/GeovaniTech/delispizzaria"
+            		image="images/delispizzaria.png" />
+            		
+            	<components:project 
+            		name="PyStock"
+            		description="#{label.stock_manager}" 
+            		technologies="Python, Qt designer #{label.and_word} Sqlite3"
+            		github="https://github.com/GeovaniTech/PyStock_controle_de_estoque"
+            		youtube="https://www.youtube.com/watch?v=PSWGvqeFCYM"
+            		image="images/pystock-desktop.png" />
+            	
+            	<components:project 
+            		name="MyStore"
+            		description="#{label.wine_store}" 
+            		technologies="Java, JSP, CSS #{label.and_word} Servelets"
+            		github="https://github.com/GeovaniTech/MyStore-Wines"
+            		youtube="https://www.youtube.com/watch?v=6XngAk0FyPA"
+            		image="images/mystore.png" />
+
+				<components:project 
+            		name="DownTo"
+            		description="#{label.down_to}" 
+            		technologies="Python, Qt designer"
+            		github="https://github.com/GeovaniTech/DownTo-Videos-Musics"
+            		youtube="https://youtube.com/watch?v=bR1R0ZgdAnw"
+            		image="images/downto.png" />
+				
+				<components:project 
+            		name="ListenNow"
+            		description="#{label.listennow_desktop}" 
+            		technologies="Python, Qt designer #{label.and_word} Sqlite3"
+            		github="htttechnologiesps://github.com/GeovaniTech/ListenNow_V2"
+            		youtube="https://www.youtube.com/watch?v=Y4BGA2b9cks"
+            		image="images/listennow.png" />
+            </div>
+        </section>
+    </h:body>
+</html>

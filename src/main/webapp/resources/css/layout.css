@@ -37,6 +37,18 @@ nav a:hover {
     color: var(--primary-hover);
 }
 
+.fi-rs-settings {
+	font-size: 22px;
+	margin-left: 20px;
+	display: flex;
+	transition: 0.4s;
+	cursor: pointer;
+}
+
+.fi-rs-settings:hover {
+	color: var(--primary-hover);
+}
+
 section {
     height: 100vh;
 }

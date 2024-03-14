@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core"
+  	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:components="http://java.sun.com/jsf/composite/components"
+	xmlns:jsf="http://xmlns.jcp.org/jsf">
+	
+	<composite:interface>
+		<composite:attribute name="name"/>
+		<composite:attribute name="description" />
+		<composite:attribute name="technologies" />
+		<composite:attribute name="github" default="" />
+		<composite:attribute name="youtube" default="" />
+		<composite:attribute name="image" />
+		<composite:attribute name="url" />
+		<composite:attribute name="icon" default="" />
+	</composite:interface>
+	
+	<composite:implementation>
+        <div class="card-projeto">
+            <div class="div-img-projeto">
+                <img src="#{cc.attrs.image}" />
+            </div>
+           
+            <div class="div-infos-projeto">
+                <p>#{cc.attrs.name}</p>
+                <p>#{cc.attrs.description}</p>
+                <p>#{label.technologies}: #{cc.attrs.technologies}</p>
+            </div>
+            
+            <div class="horizontal-left">
+				<div jsf:rendered="#{cc.attrs.github eq '' ? false : true}">
+	                <a href="#{cc.attrs.github}" target="_blank" class="redes-sociais" >
+	                	<img src="images/github_branco.png" />
+	               	</a>
+				</div>
+        			
+				<div jsf:rendered="#{cc.attrs.youtube eq '' ? false : true}">
+					<a href="#{cc.attrs.youtube}" target="_blank" class="redes-sociais" >
+						<img src="images/youtube.png" />
+					</a>
+				</div>
+				
+				<div jsf:rendered="#{cc.attrs.icon eq '' ? false : true}">
+					<a href="#{cc.attrs.url}" target="_blank" class="redes-sociais">
+						<img src="#{cc.attrs.icon}" />
+					</a>
+				</div>
+            </div>
+        </div>
+	</composite:implementation>
+</html>
