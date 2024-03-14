@@ -36,22 +36,6 @@
 									oncomplete="updateConfigs();" />
 						</p:selectOneMenu>
 					</div>
-					
-					<div class="vertical-left">
-						<p:outputLabel for="darkMode" value="#{label.dark_mode}"/>
-						<p:toggleSwitch 
-							id="darkMode"
-							value="#{MBAppConfigs.darkMode}"
-							onIcon="pi pi-sun" 
-							offIcon="pi pi-moon" 
-							styleClass="dark-mode">
-	
-							<p:ajax 
-								event="change" 
-								process="@form"
-								oncomplete="updateConfigs();" />
-						</p:toggleSwitch>
-					</div>
 				</div>		
 			</h:form>
 		</p:overlayPanel>

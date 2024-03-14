@@ -23,7 +23,6 @@ public class MBAppConfigs implements Serializable {
 	public static final String MANAGED_BEAN_NAME = "MBAppConfigs";
 	
 	private String language;
-	private boolean darkMode;
 	
 	private List<Locale> localeList;
 	
@@ -35,7 +34,6 @@ public class MBAppConfigs implements Serializable {
 		
 		//Initial Configurations
 		this.setLanguage(Locale.getDefault().getLanguage());
-		this.setDarkMode(false);
 		
 		this.getConfigsFromCookies();
 	}
@@ -44,9 +42,7 @@ public class MBAppConfigs implements Serializable {
  		this.createCookiePreferences();
  	}
 	
- 	public boolean getConfigsFromCookies() {
- 		this.setDarkMode(CookieUtil.getDarkModeCookie());
- 		
+ 	public boolean getConfigsFromCookies() { 		
  		if(CookieUtil.getLanguageCookie() != null) {
  			this.setLanguage(CookieUtil.getLanguageCookie());
  			
@@ -67,15 +63,10 @@ public class MBAppConfigs implements Serializable {
 	public void createCookiePreferences() {	
 		HttpServletResponse response = (HttpServletResponse) FacesContext.getCurrentInstance().getExternalContext().getResponse();
 		
-		Cookie darkMode = new Cookie("darkMode", "" + this.isDarkMode());
-		darkMode.setMaxAge(60*60*24*30);
-		darkMode.setPath("/portfolio");
-		
 		Cookie language = new Cookie("language", this.getLanguage());
 		language.setMaxAge(60*60*24*30);
 		language.setPath("/portfolio");
 		
-		response.addCookie(darkMode);
 		response.addCookie(language);
 	}
 	
@@ -85,12 +76,6 @@ public class MBAppConfigs implements Serializable {
 	}
 	public void setLanguage(String language) {
 		this.language = language;
-	}
-	public boolean isDarkMode() {
-		return darkMode;
-	}
-	public void setDarkMode(boolean darkMode) {
-		this.darkMode = darkMode;
 	}
 	public List<Locale> getLocaleList() {
 		return localeList;
