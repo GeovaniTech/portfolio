@@ -35,32 +35,32 @@
 		        <div id="div-titulo">
 		           <img src="images/logo.png" style="width: 80px; height: 40px;" />
 		        </div>
-		
-		        <div class="mobile-menu" onclick="abrirMenu()">
-		            <div id="line1"></div>
-		            <div id="line2"></div>
-		            <div id="line3"></div>
-		        </div>  
-		
+
+				<nav id="menu-desktop">
+		            <ul id="menu">
+		                <a href="#inicio">#{label.home}</a>
+		                <a href="#sobre">#{label.about_me}</a>
+		                <a href="#tecnologias">#{label.technologies}</a>
+		                <a href="#projetos" id="btn-contato">#{label.projects}</a>
+		            </ul>
+		        </nav>
+		        
 				<div class="horizontal-center">
-					<nav id="menu-desktop">
-			            <ul id="menu">
-			                <a href="#inicio">#{label.home}</a>
-			                <a href="#sobre">#{label.about_me}</a>
-			                <a href="#tecnologias">#{label.technologies}</a>
-			                <a href="#projetos" id="btn-contato">#{label.projects}</a>
-			            </ul>
-			        </nav>
+					<div class="mobile-menu" onclick="abrirMenu()">
+			            <div id="line1"></div>
+			            <div id="line2"></div>
+			            <div id="line3"></div>
+			        </div>  
 			        
-					<i jsf:id="options" class="fi fi-rs-settings"></i>
+			        <i jsf:id="options" class="fi fi-rs-settings"></i>
 				</div>
 		    </header>
 		
 		    <div id="menu-mobile">
-		        <a href="#inicio">Home</a>
-		        <a href="#sobre">About Me</a>
-		        <a href="#tecnologias">Technologies</a>
-		        <a href="#projetos" id="btn-contato">Projects</a>
+		        <a href="#inicio">#{label.home}</a>
+		        <a href="#sobre">#{label.about_me}</a>
+		        <a href="#tecnologias">#{label.technologies}</a>
+		        <a href="#projetos">#{label.projects}</a>
 		    </div>
 		
 		    <main>

@@ -43,6 +43,7 @@ nav a:hover {
 	display: flex;
 	transition: 0.4s;
 	cursor: pointer;
+	color: var(--primary-color);
 }
 
 .fi-rs-settings:hover {
@@ -122,7 +123,7 @@ html {
     .mobile-menu {
         display: block;
     }
-
+    
     *::-webkit-scrollbar-thumb {
         background-color: var(--primary-hover);
     }
@@ -149,11 +150,23 @@ html {
     width: 0vw;
     right: -300px;
     background-color: var(--primary-color);
+   	padding-top: 10px;
+   	transition: 0.4s;
 }
 
 #menu-mobile a {
     color: white;
     margin-right: 40px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    border-bottom: solid 1px white;
+}
+
+.google-icons {
+	font-size: 30px !important;
+	margin-right: 10px;
+	color: var(--text);
 }
 
 button {

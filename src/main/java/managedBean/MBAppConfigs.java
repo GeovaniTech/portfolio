@@ -11,7 +11,6 @@ import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 import jakarta.inject.Named;
 import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import util.CookieUtil;
 
@@ -30,7 +29,6 @@ public class MBAppConfigs implements Serializable {
 		this.setLocaleList(new ArrayList<Locale>());
 		this.getLocaleList().add(new Locale("pt_BR"));
 		this.getLocaleList().add(new Locale("en_US"));
-		
 		
 		//Initial Configurations
 		this.setLanguage(Locale.getDefault().getLanguage());
