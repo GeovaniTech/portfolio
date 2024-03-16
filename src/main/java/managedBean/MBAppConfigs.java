@@ -52,7 +52,7 @@ public class MBAppConfigs implements Serializable {
 	public void refreshPage() {
 		try {
 			ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
-			ec.redirect("https://port.devpree.com.br/portfolio");
+			ec.redirect("https://port.devpree.com.br");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
