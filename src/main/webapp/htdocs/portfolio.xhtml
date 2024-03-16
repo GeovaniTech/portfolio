@@ -24,23 +24,20 @@
 		<h:outputStylesheet library="css" name="technologies.css" />
 		<h:outputStylesheet library="css" name="projects.css" />
 		
-		<link rel='stylesheet' href="/resources/css/layout.css" />
-		<link rel='stylesheet' href="/resources/css/alignments.css" />
-		<link rel='stylesheet' href="/resources/css/home.css" />
-		<link rel='stylesheet' href="/resources/css/about-me.css" />
-		<link rel='stylesheet' href="/resources/css/technologies.css" />
-		<link rel='stylesheet' href="/resources/css/projects.css" />
-		
 	    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css' />
 	    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css' />
-	    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	    <link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon" />
 	</h:head>
 	
 	<h:body>
 		<f:view locale="#{MBAppConfigs.language}" id="view-locale">	
 		    <header>
 		        <div id="div-titulo">
-		           <img src="images/logo.png" style="width: 80px; height: 40px;" />
+					<p:graphicImage 
+						library="images"
+						name="logo.png"
+						width="80"
+						height="40"/>
 		        </div>
 
 				<nav id="menu-desktop">

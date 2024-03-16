@@ -23,7 +23,9 @@
 	<composite:implementation>
         <div class="card-projeto">
             <div class="div-img-projeto">
-                <img src="#{cc.attrs.image}" />
+                <p:graphicImage 
+                	library="images"
+                	name="#{cc.attrs.image}" />
             </div>
            
             <div class="div-infos-projeto">
@@ -35,19 +37,25 @@
             <div class="horizontal-left">
 				<div jsf:rendered="#{cc.attrs.github eq '' ? false : true}">
 	                <a href="#{cc.attrs.github}" target="_blank" class="redes-sociais" >
-	                	<img src="images/github_branco.png" />
+	                	<p:graphicImage 
+	                		library="images"
+	                		name="github_branco.png"/>
 	               	</a>
 				</div>
         			
 				<div jsf:rendered="#{cc.attrs.youtube eq '' ? false : true}">
 					<a href="#{cc.attrs.youtube}" target="_blank" class="redes-sociais" >
-						<img src="images/youtube.png" />
+						<p:graphicImage 
+							library="images"
+							name="youtube.png" />
 					</a>
 				</div>
 				
 				<div jsf:rendered="#{cc.attrs.icon eq '' ? false : true}">
 					<a href="#{cc.attrs.url}" target="_blank" class="redes-sociais">
-						<img src="#{cc.attrs.icon}" />
+						<p:graphicImage 
+							library="images"
+							name="/icons/#{cc.attrs.icon}" />
 					</a>
 				</div>
             </div>
