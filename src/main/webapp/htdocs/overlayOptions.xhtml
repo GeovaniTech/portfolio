@@ -10,16 +10,7 @@
 	
 	<ui:composition>
 		<p:overlayPanel for="options">
-			<h:form id="preferences">
-				<p:remoteCommand 
-					autoRun="false"
-					name="updateConfigs"
-					action="#{MBAppConfigs.updateUserConfigs()}" />
-					
-				<p:remoteCommand
-					 name="refreshPage"
-					 action="#{MBAppConfigs.refreshPage()}"/>
-			
+			<h:form id="preferences">					
 				 <div class="horizontal-center-left">
 					<div class="vertical-left mg-r-10">
 						<p:outputLabel for="language" value="#{label.language}"/>
@@ -36,7 +27,7 @@
 							
 								<p:ajax 
 									event="change"
-									oncomplete="updateConfigs(); refreshPage();" />
+									listener="#{MBAppConfigs.updateUserConfigs()}" />
 						</p:selectOneMenu>
 					</div>
 				</div>		

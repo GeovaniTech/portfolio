@@ -49,10 +49,10 @@ public class MBAppConfigs implements Serializable {
  		return false;
  	}
  	
-	public void refreshPage() throws IOException {
+	public void refreshPage() {
 		try {
 			ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
-			ec.redirect("https://port.devpree.com.br");
+			ec.redirect("http://localhost:8080/portfolio");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -66,6 +66,8 @@ public class MBAppConfigs implements Serializable {
 		language.setPath("/portfolio");
 		
 		response.addCookie(language);
+		
+		this.refreshPage();
 	}
 	
 	// Getters and Setters
