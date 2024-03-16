@@ -8,13 +8,17 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:components="http://java.sun.com/jsf/composite/components">
 	
-	<h:body>
+	<ui:composition>
 		<p:overlayPanel for="options">
 			<h:form id="preferences">
 				<p:remoteCommand 
 					autoRun="false"
 					name="updateConfigs"
 					action="#{MBAppConfigs.updateUserConfigs()}" />
+					
+				<p:remoteCommand
+					 name="refreshPage"
+					 action="#{MBAppConfigs.refreshPage()}"/>
 			
 				 <div class="horizontal-center-left">
 					<div class="vertical-left mg-r-10">
@@ -31,13 +35,12 @@
 								itemValue="#{language.language}" />
 							
 								<p:ajax 
-									render="all" 
-									listener="#{MBAppConfigs.refreshPage()}"
-									oncomplete="updateConfigs();" />
+									event="change"
+									oncomplete="updateConfigs(); refreshPage();" />
 						</p:selectOneMenu>
 					</div>
 				</div>		
 			</h:form>
 		</p:overlayPanel>
-	</h:body>
+	</ui:composition>
 </html>
