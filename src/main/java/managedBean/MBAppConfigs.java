@@ -63,7 +63,7 @@ public class MBAppConfigs implements Serializable {
 		
 		Cookie language = new Cookie("language", this.getLanguage());
 		language.setMaxAge(60*60*24*30);
-		language.setPath("/portfolio");
+		language.setPath("/");
 		
 		response.addCookie(language);
 		
