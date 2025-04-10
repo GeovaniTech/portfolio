@@ -12,64 +12,44 @@
 	<h:body>	
         <section id="projetos" class="reveal">
             <div>
-                <h2 id="titulo-page-projeto">#{label.my_projects}</h2>
+                <h2 id="titulo-page-projeto">#{label.main_projects}</h2>
             </div>
 
             <div id="container-projetos">
-		<components:project 
+                <components:project 
+          			name="ListenNow"
+            		description="#{label.listennow_mobile_app}" 
+            		technologies="Kotlin, Retrofit #{label.and_word} Room"
+            		github="https://github.com/GeovaniTech/ListenNow-App"
+            		image="listennow-screens.png" />
+            		
+				<components:project 
+          			name="ListenNow Api"
+            		description="#{label.listennow_api}" 
+            		technologies="Python, Flask #{label.and_word} PostgreSQL"
+            		github="https://github.com/GeovaniTech/ListenNow-Api"
+            		url="https://api.devpree.com.br/listennow"
+            		image="listennow-api.png"
+            		icon="listennow-api-icon.png"
+            		iconCustomStyle="width: 33px;" />
+            		
+      			<components:project 
+            		name="Notes"
+            		description="#{label.notes}" 
+            		technologies="Java, JSF, Primefaces, JPA  #{label.and_word} PostgreSQL"
+            		github="https://github.com/GeovaniTech/investme"
+            		url="https://www.devpree.com.br/notes"
+            		image="notes-text-editor.png"
+            		icon="notes-ico.ico" />
+            		
+				<components:project 
             		name="InvestMe"
             		description="#{label.financial_control_system}" 
-            		technologies="Java, JSF, Primefaces, JPA  #{label.and_word} Postgresql"
+            		technologies="Java, JSF, Primefaces, JPA  #{label.and_word} PostgreSQL"
             		github="https://github.com/GeovaniTech/investme"
             		url="https://www.devpree.com.br/investme/login"
             		image="investme-home.png"
             		icon="investme.ico" />
-				
-		<components:project 
-            		name="DevJobs"
-            		description="#{label.projects_manager}" 
-            		technologies="Java, JSF, Primefaces, JPA #{label.and_word} Postgresql"
-            		github="https://github.com/GeovaniTech/DevJobs"
-            		image="devjobs.png" />
-
-				<components:project 
-            		name="Délis Pizzaria"
-            		description="#{label.pizzas_system}" 
-            		technologies="Java, JSF, CSS, Primefaces, JDBC #{label.and_word} Postgresql"
-            		github="https://github.com/GeovaniTech/delispizzaria"
-            		image="delispizzaria.png" />
-            		
-            	<components:project 
-            		name="PyStock"
-            		description="#{label.stock_manager}" 
-            		technologies="Python, Qt designer #{label.and_word} Sqlite3"
-            		github="https://github.com/GeovaniTech/PyStock_controle_de_estoque"
-            		youtube="https://www.youtube.com/watch?v=PSWGvqeFCYM"
-            		image="pystock-desktop.png" />
-            	
-            	<components:project 
-            		name="MyStore"
-            		description="#{label.wine_store}" 
-            		technologies="Java, JSP, CSS #{label.and_word} Servelets"
-            		github="https://github.com/GeovaniTech/MyStore-Wines"
-            		youtube="https://www.youtube.com/watch?v=6XngAk0FyPA"
-            		image="mystore.png" />
-
-				<components:project 
-            		name="DownTo"
-            		description="#{label.down_to}" 
-            		technologies="Python, Qt designer"
-            		github="https://github.com/GeovaniTech/DownTo-Videos-Musics"
-            		youtube="https://youtube.com/watch?v=bR1R0ZgdAnw"
-            		image="downto.png" />
-				
-				<components:project 
-            		name="ListenNow"
-            		description="#{label.listennow_desktop}" 
-            		technologies="Python, Qt designer #{label.and_word} Sqlite3"
-            		github="htttechnologiesps://github.com/GeovaniTech/ListenNow_V2"
-            		youtube="https://www.youtube.com/watch?v=Y4BGA2b9cks"
-            		image="listennow.png" />
             </div>
         </section>
     </h:body>

@@ -18,6 +18,7 @@
 		<composite:attribute name="image" />
 		<composite:attribute name="url" />
 		<composite:attribute name="icon" default="" />
+		<composite:attribute name="iconCustomStyle" default="" />
 	</composite:interface>
 	
 	<composite:implementation>
@@ -55,7 +56,8 @@
 					<a href="#{cc.attrs.url}" target="_blank" class="redes-sociais">
 						<p:graphicImage 
 							library="images"
-							name="/icons/#{cc.attrs.icon}" />
+							name="/icons/#{cc.attrs.icon}"
+							style="#{cc.attrs.iconCustomStyle}" />
 					</a>
 				</div>
             </div>
